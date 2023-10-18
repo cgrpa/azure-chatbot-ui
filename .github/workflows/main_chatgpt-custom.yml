@@ -51,9 +51,9 @@ jobs:
 
       - name: Modify /etc/hosts for fake DNS
         run: |
-          sudo -- sh -c -e "echo '{ASE's Private IP}    {ASE Name}.appserviceenvironment.net' >> /etc/hosts";
-          sudo -- sh -c -e "echo '{ASE's Private IP}    scm.{ASE Name}.appserviceenvironment.net' >> /etc/hosts";
-          sudo -- sh -c -e "echo '{ASE's Private IP}    {AppName}.scm.{ASE Name}.appserviceenvironment.net' >> /etc/hosts";
+          sudo -- sh -c -e "echo '20.90.134.32    ASP-researchrg-9119.appserviceenvironment.net' >> /etc/hosts";
+          sudo -- sh -c -e "echo '20.90.134.32    scm.ASP-researchrg-9119.appserviceenvironment.net' >> /etc/hosts";
+          sudo -- sh -c -e "echo '20.90.134.32    dgchatgpt.scm.ASP-researchrg-9119.appserviceenvironment.net' >> /etc/hosts";
 
       - name: 'Deploy to Azure Web App'
         id: deploy-to-webapp
